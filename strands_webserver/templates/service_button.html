@@ -1,0 +1,6 @@
+$def with (service, label, btn_classes)
+
+<!-- Sorry this is so ugly, but this seems to be the only way to get the script executed -->
+<button type="button" onclick="var service_service = new ROSLIB.Service({ros : ros, name : '$:service', serviceType : 'std_srvs/Empty'}); var request_service = new ROSLIB.ServiceRequest();  service_service.callService(request_service, function(result) {console.log('Called service'); }); console.log('Called')" class="$:btn_classes">$:label</button>
+
+

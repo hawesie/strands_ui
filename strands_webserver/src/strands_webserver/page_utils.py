@@ -24,6 +24,12 @@ def generate_two_column_page(file_name, target_dir, left = "", right = "", scrip
 
 	print 'written ', full_path
 
+"""
+Uses web.py to generate html for a button which calls as a service.
+"""
+def generate_button(label, service, btn_classes="btn btn-lg btn-default btn-block"):
+    return str(render.service_button(service, label, btn_classes))
+
 
 """
 Uses web.py to generate html for the body of a page which contains an arbitrary html notice with buttons below. Buttons should be specified as a list of (label, service) tuples where clicking on the button with label will call /service_prefix/service. Html will work in the body of the main page served by strands_webserver.
